@@ -40,11 +40,11 @@
         android:id = "@+id/LinearLay1"
         app:layout_constraintTop_toBottomOf="@id/textView"
         >
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="80dp"
             android:layout_height="70dp"
             android:background="@drawable/cir"
-            android:scaleType="fitCenter"
+            android:backgroundTint="@color/black"
             android:src = "@drawable/img_4"/>
         <TextView
             android:layout_width="wrap_content"
@@ -116,7 +116,7 @@
         <TextView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background= "@drawable/img_2"
+            android:background= "@drawable/chat"
             android:layout_marginLeft="50dp"
 
             android:textSize="22sp"
@@ -132,7 +132,7 @@
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src = "@drawable/img_3"
+            android:src = "@drawable/thump"
             android:layout_marginLeft="10dp"
 
             android:textSize="22sp"
