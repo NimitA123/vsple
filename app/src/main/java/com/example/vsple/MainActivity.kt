@@ -29,18 +29,28 @@ class MainActivity : AppCompatActivity() {
     private fun buildData() {
         button.setOnClickListener {
             var apiService = Network.getInstance().create(ApiService::class.java)
-            apiService.getApi(editText.toString(), editPassword.toString())
+            apiService.getApi(editText.text.toString(), editPassword.text.toString())
                 .enqueue(object : retrofit2
                 .Callback<ResponseDTO> {
                     override fun onResponse(
                         call: Call<ResponseDTO>,
                         response: Response<ResponseDTO>
                     ) {
-                        Toast.makeText(
-                            applicationContext,
-                            "Uploaded SuccessFull!",
-                            Toast.LENGTH_LONG
-                        ).show()
+                        if(editText.text.toString() == "hr@vsple.com" && editPassword.text.toString().trim()
+                        == "Aa@1234567") {
+
+                            var intent = Intent(applicationContext, MainActivity2::class.java)
+                            startActivity(intent)
+                            Toast.makeText(
+                                applicationContext,
+                                "Uploaded SuccessFull!",
+                                Toast.LENGTH_LONG
+                            ).show()
+
+                        }
+                        else{
+                            Toast.makeText(applicationContext, "UnValid Credentials", Toast.LENGTH_LONG).show()
+                        }
                     }
 
                     override fun onFailure(call: Call<ResponseDTO>, t: Throwable) {
@@ -48,8 +58,6 @@ class MainActivity : AppCompatActivity() {
                     }
 
                 })
-            var intent = Intent(applicationContext, MainActivity2::class.java)
-            startActivity(intent)
 
         }
     }

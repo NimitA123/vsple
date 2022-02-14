@@ -4,14 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A93F51B5"
+
     app:cardCornerRadius="20dp"
     tools:context=".MainActivity2">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#A93F51B5">
+        android:layout_height="wrap_content"
+        android:background="#000080">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:id = "@+id/text">
+    <View
+        android:layout_width="250dp"
+        android:layout_height="2dp"
+        android:layout_margin="20dp"
+        android:id = "@+id/view7"
+        android:background="#7EFFFFFF"
 
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -19,29 +32,41 @@
         android:text = "Jan 02, 2021"
         android:textColor="@color/white"
         android:textSize="22sp"
-        android:id = "@+id/text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="10dp"/>
+        android:layout_alignParentEnd="true"
 
-    <TextView
-        android:id="@+id/text2"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/text"
+    android:id="@+id/text2">
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="70dp"
+        android:src = "@drawable/nim2"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
         android:text="Saved Tip"
         android:textColor="@color/white"
         android:textSize="22sp"
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text" />
+        />
+
+</LinearLayout>
+
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="30sp"
-        android:src="@drawable/img_1"
+        android:src="@drawable/nim"
         android:id = "@+id/image"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text2" />
@@ -50,144 +75,186 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:id = "@+id/LinearLay"
+        android:layout_marginTop="15dp"
         app:layout_constraintTop_toBottomOf="@id/image"
         app:layout_constraintStart_toStartOf="parent">
         <TextView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background= "@drawable/chat"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background= "@drawable/comment"
             android:layout_marginLeft="50dp"
 
             android:textSize="22sp"
             />
         <TextView
             android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="5dp"
-
+            android:layout_height="25dp"
             android:text="50"
             android:textSize="22sp"
             />
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background= "@drawable/thump"
-            android:layout_marginLeft="10dp"
-
+        <TextView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background= "@drawable/like"
             android:textSize="22sp"
             />
         <TextView
             android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="15dp"
-
+            android:layout_height="25dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="5dp"
             android:text="50"
             android:textSize="22sp"
             />
-    </LinearLayout>
 
+    </LinearLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/LinearLay"
+   android:id = "@+id/relativeLayout"
+    >
+
+
+        <View
+            android:layout_width="250dp"
+            android:layout_height="2dp"
+            android:layout_margin="20dp"
+           android:id = "@+id/view4"
+            android:background="#7EFFFFFF"
+
+             />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text = "Apr 09, 2021"
-        android:textColor="@color/white"
-        android:textSize="22sp"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentEnd="true"
+       android:layout_alignEnd="@id/view4"
         android:id = "@+id/text3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/LinearLay"
-        android:layout_margin="10dp"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id = "@+id/LinearLay1"
-        app:layout_constraintTop_toBottomOf="@id/text3"
-        >
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="96dp"
-            android:layout_height="96dp"
-            android:background="@drawable/cir"
-             android:backgroundTint="@color/black"
-            android:src = "@drawable/img_4"/>
-        <TextView
+       />
+    </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id = "@+id/LinearLay1"
+            app:layout_constraintTop_toBottomOf="@id/relativeLayout"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/cir"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="@color/white"
+                android:src = "@drawable/img_4"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "Miked Liked You"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20sp"
+                android:textSize="18sp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg"
+            android:text="Follow"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+
+            android:id = "@+id/btnFollow"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/LinearLay1" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id = "@+id/relativeLayout1"
+            app:layout_constraintTop_toBottomOf="@id/btnFollow">
+            <View
+                android:layout_width="250dp"
+                android:layout_height="2dp"
+                android:layout_margin="20dp"
+                android:id = "@+id/view5"
+                android:background="#7EFFFFFF"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "Mar 09, 2021"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignEnd="@id/view5"
+                android:id = "@+id/text4"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLay2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/relativeLayout1"
+          >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/cir"
+
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="30dp"
+                android:text="amit45g followed you"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg"
+            android:text="Following"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:id = "@+id/btnFollow1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/LinearLay2" />
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text = "Miked Liked You"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="20sp"
-            android:textSize="18sp"
-            android:textColor="@color/white"/>
-    </LinearLayout>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg"
-        android:text="Follow"
-        android:textAllCaps="false"
-        android:textSize="20dp"
-        android:id = "@+id/btnFollow"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/LinearLay1" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text = "Apr 09, 2021"
-        android:textColor="@color/white"
-        android:textSize="22sp"
-        android:id = "@+id/text4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnFollow"
-        android:layout_margin="10dp"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id = "@+id/LinearLay2"
-        app:layout_constraintTop_toBottomOf="@id/text4"
-        >
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@drawable/cir"
-
-            android:backgroundTint="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/btnFollow1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text = "Go to Third Page"
+            android:textColor="@color/white"
+            android:background="@drawable/bg"
+            android:id = "@+id/btnSecond2"
+            android:textAllCaps="false"
+            android:textSize="20dp"
             />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text = "amit45g followed you"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="20sp"
-            android:textSize="18sp"
-            android:textColor="@color/white"/>
-    </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg"
-        android:text="Following"
-        android:textAllCaps="false"
-        android:textSize="20dp"
-        android:textColor="#2D000000"
-        android:id = "@+id/btnFollow1"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/LinearLay2" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/btnFollow1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text = "Go to Third Page"
-        android:textColor="@color/white"
-        android:background="@drawable/bg"
-        android:id = "@+id/btnSecond2"
-        android:textAllCaps="false"
-        android:textSize="20dp"
-     />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

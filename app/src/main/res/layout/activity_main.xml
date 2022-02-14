@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3F51B5"
+    android:background="@drawable/login"
     tools:context=".MainActivity">
 
     <TextView
@@ -48,6 +48,7 @@
         app:layout_constraintTop_toBottomOf="@id/etPassword"
         android:layout_margin="20dp"
         android:text = "Login"
+        android:backgroundTint="#3651E3"
         android:id = "@+id/LoginBtn"
         android:textAllCaps="false"
         />
