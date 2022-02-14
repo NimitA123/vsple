@@ -18,10 +18,11 @@
     app:layout_constraintTop_toTopOf="parent"
     android:id = "@+id/text">
     <View
-        android:layout_width="250dp"
+        android:layout_width="200dp"
         android:layout_height="2dp"
-        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
         android:id = "@+id/view7"
+        android:layout_marginLeft="10dp"
         android:background="#7EFFFFFF"
 
         />
@@ -31,9 +32,9 @@
         android:layout_height="wrap_content"
         android:text = "Jan 02, 2021"
         android:textColor="@color/white"
-        android:textSize="22sp"
+        android:textSize="18sp"
         android:layout_alignParentEnd="true"
-
+        android:layout_marginTop="10dp"
         android:layout_alignParentRight="true" />
 </RelativeLayout>
 <LinearLayout
@@ -118,7 +119,7 @@
 
 
         <View
-            android:layout_width="250dp"
+            android:layout_width="200dp"
             android:layout_height="2dp"
             android:layout_margin="20dp"
            android:id = "@+id/view4"
@@ -180,11 +181,11 @@
             android:id = "@+id/relativeLayout1"
             app:layout_constraintTop_toBottomOf="@id/btnFollow">
             <View
-                android:layout_width="250dp"
+                android:layout_width="200dp"
                 android:layout_height="2dp"
                 android:layout_margin="20dp"
                 android:id = "@+id/view5"
-                android:background="#7EFFFFFF"
+                android:backgroud = "#7EFFFFFF"
 
                 />
             <TextView

@@ -103,7 +103,7 @@
     app:layout_constraintTop_toBottomOf="@id/LinearLay"
     >
     <View
-        android:layout_width="260dp"
+        android:layout_width="200dp"
         android:layout_height="2dp"
         android:layout_margin="20dp"
         android:id = "@+id/view1"
@@ -164,7 +164,7 @@
 
             >
         <View
-            android:layout_width="260dp"
+            android:layout_width="200dp"
             android:layout_height="2dp"
             android:layout_margin="20dp"
             android:id = "@+id/view2"
